@@ -4,8 +4,8 @@ const port = 3000;
 const templateFolder = "views";
 
 var sampleDataSet = {
-    this: "is just a simple example.",
-    can: "you say hello?"
+    ads: "hier könnte Ihre Werbung stehen",
+    link_text: "zu den docs"
 }
 
 

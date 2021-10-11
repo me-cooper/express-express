@@ -19,7 +19,7 @@
 
 <body>
 
-  <%~ includeFile('./subtemplates/404', {data: "kann auch übergeben werden als objekt"}) %>
+  <%~ includeFile('./subtemplates/404', {data: "kann auch hier übergeben werden - als objekt"}) %>
 
   <!-- Javascript Datei -->
   <script src="assets/js/script.js"></script>

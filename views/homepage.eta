@@ -19,10 +19,10 @@
       <center>
         <!-- Hier könnte ihre Werbung stehen -->
         <img src="img/1-profileavatar.png">
-        <h1 class="light">hier könnte Ihre Werbung stehen</h1>
+        <h1 class="light"><%= it.ads %></h1>
     
         <!-- DOCS -->
-        <h4><a href="/docs">zu den docs</a></h4>
+        <h4><a href="/docs"><%= it.link_text %></a></h4>
       </center>
     </div>
   </div>

@@ -1,0 +1,14 @@
+/* Diese Style-Datei ist momenten überall eingebunden */
+
+ a:link, a:active, a:visited{
+    color: #fa341d;
+    text-decoration: none;
+}
+
+div#background-container{
+background-image: url('/img/background_dark.png');
+}
+
+.light{
+    color: white;
+}

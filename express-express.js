@@ -1,5 +1,9 @@
 /* EXPRESS-EXPRESS cooper */
 
+/*
+    # SETTINGS
+*/
+
 const port = 3000;
 const templateFolder = "views";
 
@@ -8,12 +12,15 @@ var sampleDataSet = {
     link_text: "zu den docs"
 }
 
-
-//Server
+/*
+    # SERVER
+*/
 var express = require('express');
 var app = express();
 
-// Template Engine
+/*
+    # TEMPLATE ENGINE
+*/
 var eta = require("eta");
 eta.configure({
     views: __dirname + '/' + templateFolder
@@ -25,20 +32,46 @@ app.use(express.static(__dirname + '/'+ templateFolder));
 
 
 
-// Renderer with Data
+/*
+    # ROUTES
+*/
+
 app.get('/', (req, res) => {
-    res.render("homepage", sampleDataSet);
+    res.render("index", sampleDataSet);
 })
 
 app.get('/hello', (req, res) => {
     res.render("hello", sampleDataSet);
 })
 
-app.get('/:placeholder?', (req, res) => {
-    res.render("404", sampleDataSet);
-})
 
 
+
+/**/
+//  #   ROUTES-COLLECTION AS MODULES  e.g: */$user/ || */$user/stats || */$user/groups
+/**/ 
+var user = require('./router/user.js');
+app.use('/user', user);
+
+// For Mod-Things you can use user too! 
+// */$mods/ || */$mods/stats || */$mods/groups
+app.use('/mods', user);
+
+
+
+
+
+
+
+// Handle 404 / 505 / ....
+app.use(function(req, res, next) {
+    if (res.headersSent) {
+        return
+    }
+    // GET ERROR - 404, 503, 500, ...
+    res.status(404);
+    res.render('404', sampleDataSet);
+});
 
 
 // Launch the App

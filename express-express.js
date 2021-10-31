@@ -56,9 +56,6 @@ app.use('/search', search_route);
 
 
 
-
-
-
 // Handle 404 / 505 / ....
 app.use(function(req, res, next) {
     if (res.headersSent) {

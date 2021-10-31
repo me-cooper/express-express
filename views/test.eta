@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <style>
+         .animated {
+            background-image: url("https://my.makesmart.net/assets/uploads/profile/1-profileavatar.png"); 
+            background-repeat: no-repeat;
+            background-position: left top; 
+            width: 128px;
+            height: 128px;
+            animation: wiggle 5s infinite; 
+         }
+         
+         
+         @keyframes wiggle { 
+            0% { transform: skewX(-5deg); } 
+            50% { transform: skewX(10deg); } 
+            100% { transform: skewX(-5deg); } 
+         }
+
+      </style>
+   </head>
+
+   <body>
+      <div id = "animated-example" class = "animated"></div>
+      
+   </body>
+</html>

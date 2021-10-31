@@ -50,12 +50,8 @@ app.get('/hello', (req, res) => {
 /**/
 //  #   ROUTES-COLLECTION AS MODULES  e.g: */$user/ || */$user/stats || */$user/groups
 /**/ 
-var user = require('./router/user.js');
-app.use('/user', user);
-
-// For Mod-Things you can use user too! 
-// */$mods/ || */$mods/stats || */$mods/groups
-app.use('/mods', user);
+var search_route = require('./router/search.js');
+app.use('/search', search_route);
 
 
 

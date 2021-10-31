@@ -4,7 +4,7 @@
     # SETTINGS
 */
 
-const port = 3000;
+const port = 6485;
 const templateFolder = "views";
 
 var sampleDataSet = {
